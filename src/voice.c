@@ -36,7 +36,7 @@ char *get_readable_dictation_status(DictationSessionStatus status){
 //This is called when the dictation API has something for us (good or bad)
 void dictation_session_callback(DictationSession *session, DictationSessionStatus status, char *transcription, void *context) {
     //It checks if it's all good and in the clear
-    if(status == DictationSessionStatusSuccess) {]
+    if(status == DictationSessionStatusSuccess) {
         //Prints the transcription into the buffer
         snprintf(last_text, sizeof(last_text), "%s", transcription);
         //Sets it onto the text layer
